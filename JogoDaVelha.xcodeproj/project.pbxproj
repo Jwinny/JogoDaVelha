@@ -12,6 +12,7 @@
 		C07F6F412A450FDB00C75E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07F6F402A450FDB00C75E6C /* Assets.xcassets */; };
 		C07F6F442A450FDB00C75E6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07F6F432A450FDB00C75E6C /* Preview Assets.xcassets */; };
 		C07F6F4B2A45102C00C75E6C /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F6F4A2A45102C00C75E6C /* GameBoardView.swift */; };
+		C07F6F4D2A45142200C75E6C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07F6F4C2A45142200C75E6C /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C07F6F402A450FDB00C75E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C07F6F432A450FDB00C75E6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C07F6F4A2A45102C00C75E6C /* GameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
+		C07F6F4C2A45142200C75E6C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				C07F6F3C2A450FDA00C75E6C /* JogoDaVelhaApp.swift */,
 				C07F6F3E2A450FDA00C75E6C /* ContentView.swift */,
 				C07F6F4A2A45102C00C75E6C /* GameBoardView.swift */,
+				C07F6F4C2A45142200C75E6C /* Player.swift */,
 				C07F6F402A450FDB00C75E6C /* Assets.xcassets */,
 				C07F6F422A450FDB00C75E6C /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07F6F4D2A45142200C75E6C /* Player.swift in Sources */,
 				C07F6F3F2A450FDA00C75E6C /* ContentView.swift in Sources */,
 				C07F6F3D2A450FDA00C75E6C /* JogoDaVelhaApp.swift in Sources */,
 				C07F6F4B2A45102C00C75E6C /* GameBoardView.swift in Sources */,
