@@ -31,8 +31,13 @@ struct GameBoardView: View {
                             .foregroundColor(.white)
                     }
                     .onTapGesture {
-                        moves[index] = Move(player: isHumanTurn ? .human : .computer, boardIndex: index)
-                        isHumanTurn.toggle()
+                        if moves[index]?.indicator == nil{
+                            moves[index] = Move(player: isHumanTurn ? .human : .computer, boardIndex: index)
+                            isHumanTurn.toggle()
+                        }
+                        else{
+                            
+                        }
                     }
                 }
             }
