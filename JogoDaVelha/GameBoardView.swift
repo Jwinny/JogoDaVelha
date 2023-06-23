@@ -45,6 +45,13 @@ struct GameBoardView: View {
             element?.boardIndex == index
         }
     }
+    func computerMove(in moves : [Move?]) -> Int {
+        var movePosition = Int.random(in: 0..<9)
+        while isOcuppied(in: moves, forIndex: movePosition){
+            movePosition = Int.random(in: 0..<9)
+        }
+        return movePosition
+    }
 }
 
 struct GameBoardView_Previews: PreviewProvider {
