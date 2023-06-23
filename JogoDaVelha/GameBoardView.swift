@@ -11,20 +11,28 @@ struct GameBoardView: View {
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())]
+    
+    @State private var moves: [Move?] = Array(repeating: nil, count: 9)
+    @State private var isHumanTurn : Bool = true
+    
     var body: some View {
         ZStack {
             Color.black
                 .ignoresSafeArea()
                 .opacity(0.9)
             LazyVGrid(columns: columns) {
-                ForEach(0..<9){ i in
+                ForEach(0..<9){ index in
                     ZStack{
                         Circle()
                             .foregroundColor(Color.brown).opacity(0.4)
-                        Image(systemName: "xmark")
+                        Image(systemName: moves[index]?.indicator ?? "")
                             .resizable()
                             .frame(width: 40, height: 40)
                             .foregroundColor(.white)
+                    }
+                    .onTapGesture {
+                        moves[index] = Move(player: isHumanTurn ? .human : .computer, boardIndex: index)
+                        isHumanTurn.toggle()
                     }
                 }
             }
