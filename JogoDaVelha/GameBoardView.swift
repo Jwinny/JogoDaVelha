@@ -31,17 +31,18 @@ struct GameBoardView: View {
                             .foregroundColor(.white)
                     }
                     .onTapGesture {
-                        if moves[index]?.indicator == nil{
-                            moves[index] = Move(player: isHumanTurn ? .human : .computer, boardIndex: index)
-                            isHumanTurn.toggle()
-                        }
-                        else{
-                            
-                        }
+                        if isOcuppied(in: moves, forIndex: index) { return }
+                        moves[index] = Move(player: isHumanTurn ? .human : .computer, boardIndex: index)
+                        isHumanTurn.toggle()
                     }
                 }
             }
             .padding()
+        }
+    }
+    func isOcuppied(in moves : [Move?], forIndex index: Int) -> Bool{
+        return moves.contains { element in
+            element?.boardIndex == index
         }
     }
 }
